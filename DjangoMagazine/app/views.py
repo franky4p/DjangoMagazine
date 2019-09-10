@@ -4,14 +4,14 @@ Definition of views.
 
 from datetime import datetime
 from django.shortcuts import render
-from django.http import HttpRequest
+from django.http import HttpRequest, Http404
 from app.models import Feature, Product
 
 
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
-    products = Product.objects.all()[::1]
+    products = Product.objects.all()
     return render(
         request,
         'app/index.html',
