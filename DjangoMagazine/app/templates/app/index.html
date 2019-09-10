@@ -12,7 +12,7 @@
         <h2>Getting started</h2>
         <ul class="list-group">
             {% for product in products %}
-            <li class="list-group-item"><a href="{{ url_for('product', id=product.id) }}">{{product.name}}</a>
+            <li class="list-group-item"><a href="{{ product.id }}">{{product.name}}</a>
             {% endfor %}
         </ul>
     </div>
