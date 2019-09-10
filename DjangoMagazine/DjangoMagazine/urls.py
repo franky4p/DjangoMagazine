@@ -7,7 +7,7 @@ from app import forms, views
 
 
 urlpatterns = [
-    path('product/<int:id_product>', views.product),
+    path('<int:id_product>', views.product),
     path('', views.home, name='home'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
