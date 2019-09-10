@@ -59,7 +59,7 @@ ROOT_URLCONF = 'DjangoMagazine.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['app/templates/app'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
