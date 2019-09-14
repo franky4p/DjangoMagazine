@@ -1,9 +1,16 @@
-from django.contrib import admin
+"""
+Definition of views admin tables.
+"""
 
+from django.contrib import admin
 from .models import Feature, Product
+
 
 @admin.register(Feature)
 class FeatureAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'value')
+    list_display = ('product', 'name', 'value')
 
-admin.site.register(Product)
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    pass
